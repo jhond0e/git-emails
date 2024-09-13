@@ -70,9 +70,9 @@ def main(username, include_forks=True, verbose=False):
 
 if __name__ == '__main__':
     try:
+        github_username = sys.argv[1]
         if GITHUB_TOKEN == 'GITHUB_TOKEN':
                raise ValueError("Change the variable on line 4 with the value of your own github token ! Check https://github.com/settings/tokens")
-        github_username = sys.argv[1]
         include_forks = '--no-forks' not in sys.argv[2:]
         verbose = '-v' in sys.argv[2:]
         main(github_username, include_forks, verbose)
